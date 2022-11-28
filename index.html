@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Basic information about this page -->
+    <meta charset="utf-8">
+    <title>Crow | Nice to meet you</title>
+    <!-- Style and scripts files -->
+    <link rel="stylesheet" type="text/css" href="page/style.css">
+    <!-- Meta tag looking for mobile devices -->
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="theme-color" content="#232323">
+    <!-- Good information about this page -->
+    <meta name="keywords" content="Neverlose, CSGO">
+    <meta name="author" content="Crow">
+
+
+    <!-- Highlight -->
+    <link rel="stylesheet" href="page/highlight.min.css">
+    <script src="page/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- Redirect -->
+
+    <style type="text/css">
+        audio {
+            display: none;
+        }
+
+
+    </style>
+
+</head>
+
+
+
+
+
+
+
+
+
+<body>
+    <header>
+        <pre class="ascii name site-name">
+                                                                                                             
+                                                                                                 
+        CCCCCCCCCCCCC                                                                            
+        CCC::::::::::::C                                                                            
+      CC:::::::::::::::C                                                                            
+     C:::::CCCCCCCC::::C                                                                            
+    C:::::C       CCCCCCrrrrr   rrrrrrrrr      ooooooooooo wwwwwww           wwwww           wwwwwww
+   C:::::C              r::::rrr:::::::::r   oo:::::::::::oow:::::w         w:::::w         w:::::w 
+   C:::::C              r:::::::::::::::::r o:::::::::::::::ow:::::w       w:::::::w       w:::::w  
+   C:::::C              rr::::::rrrrr::::::ro:::::ooooo:::::o w:::::w     w:::::::::w     w:::::w   
+   C:::::C               r:::::r     r:::::ro::::o     o::::o  w:::::w   w:::::w:::::w   w:::::w    
+   C:::::C               r:::::r     rrrrrrro::::o     o::::o   w:::::w w:::::w w:::::w w:::::w     
+   C:::::C               r:::::r            o::::o     o::::o    w:::::w:::::w   w:::::w:::::w      
+    C:::::C       CCCCCC r:::::r            o::::o     o::::o     w:::::::::w     w:::::::::w       
+     C:::::CCCCCCCC::::C r:::::r            o:::::ooooo:::::o      w:::::::w       w:::::::w        
+      CC:::::::::::::::C r:::::r            o:::::::::::::::o       w:::::w         w:::::w         
+        CCC::::::::::::C r:::::r             oo:::::::::::oo         w:::w           w:::w          
+            CCCCCCCCCCCCC rrrrrrr               ooooooooooo            www             www           <a target="_blank" href="https://www.crow.pub/page/hide.html">!</a>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+        </pre>
+    </header>
+
+    
+    <nav>
+        <ul>
+            <li><a target="_self" href="https://www.crow.pub/index.html">Home</a></li>
+            <li><a target="_blank" href="https://www.crow.pub/about.html">About</a></li>
+            <li><a target="_blank" href="https://www.crow.pub/config.html">Configs</a></li>
+            <li><a target="_blank" href="https://www.crow.pub/script.html">Scripts</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <p>
+            <span>$</span><span style="visibility: hidden;" id="cursor">▮</span>
+        </p>
+        <style>
+            p {
+                font-size: 25px;
+                color: #00FF66;
+                margin-block-end: 0.1em;
+                margin-block-start: 0.1em;
+                margin-top: -0.5em;
+            }
+
+            #cursor {
+                font-size: 29px;
+            }
+
+            html {
+                scrollbar-width: none;
+            }
+
+            ::-webkit-scrollbar {
+                width: 0px;
+            }
+        </style>
+        <script>
+            var i = 0;
+            window.setInterval(function () {
+                document.getElementById("cursor").style.visibility = (i++ & 1) ? "hidden" : "visible";
+            }, 1000);
+        </script>
+
+        <!-- <audio autoplay="autoplay" volume="0.0" controls="controls" loop="loop" preload="auto" src="page/stan.flac"></audio> -->
+
+    </main>
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 682 || document.documentElement.scrollTop > 682) {
+                document.getElementById("totop").style.display = "block";
+            } else {
+                document.getElementById("totop").style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <!-- https://gist.github.com/allybee/5871749 -->
+    <script>
+        function targetBlank() {
+            var internal = location.host.replace("www.", "");
+            var a = document.getElementsByTagName('a');
+            for (var i = 0; i < a.length; i++) {
+                var the_host = a[i].host.replace("www.", "");
+                if (the_host != internal) {
+                    a[i].setAttribute('target', '_blank');
+                }
+            }
+        };
+        targetBlank();
+    </script>
+
+    <audio id="a_button" src="page/hover.oga"></audio>
+    <audio id="click_button" src="page/click.oga"></audio>
+
+    <script>
+        function PlaySound(soundobj) {
+            var thissound = document.getElementById(soundobj);
+            thissound.play();
+        }
+
+        function StopSound(soundobj) {
+            var thissound = document.getElementById(soundobj);
+            thissound.pause();
+            thissound.currentTime = 0;
+        }
+
+        document.body.addEventListener("mouseover", function (e) {
+            e = e || window.event;
+            var targetElem = e.target || e.srcElement;
+            if (targetElem.nodeName == "A" && targetElem.className != "sourceLine") {
+                switch (targetElem.className) {
+                    case "no":
+                        PlaySound("no_button")
+                        break;
+                    default:
+                        PlaySound("a_button")
+                }
+            }
+        }, false);
+
+        document.body.addEventListener("mouseout", function (e) {
+            e = e || window.event;
+            var targetElem = e.target || e.srcElement;
+            if (targetElem.nodeName == "A" && targetElem.className != "sourceLine") {
+                switch (targetElem.className) {
+                    case "no":
+                        StopSound("no_button")
+                        break;
+                    default:
+                        StopSound("a_button")
+                }
+            }
+        }, false);
+
+        document.body.addEventListener("click", function (e) {
+            e = e || window.event;
+            var targetElem = e.target || e.srcElement;
+            if (targetElem.nodeName == "A" && targetElem.className != "sourceLine") {
+                if (targetElem.className == "no") {
+                    PlaySound("no_click")
+                } else {
+                    PlaySound("click_button");
+                }
+            }
+        }, false);
+    </script>
+
+
+
+
+</body>
+
+</html>
